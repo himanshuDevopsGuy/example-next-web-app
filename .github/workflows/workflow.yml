@@ -7,10 +7,14 @@ on:
 
 jobs:
   
-  job_first:
+  build-project:
     runs-on: ubuntu-latest
-    name: Echo something
+    name: Build Project
     steps:
-    - name: Echo Hello-world
-      run: echo "HEllo-world"
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install NPM dependencies
+      run: npm install
+    - name: Build project assets
+      run: npm run build
   
