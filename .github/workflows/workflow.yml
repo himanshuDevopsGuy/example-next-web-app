@@ -1,0 +1,16 @@
+name: Example-next-web-app workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  
+  job_first:
+    runs-on: ubuntu-latest
+    name: Echo something
+    steps:
+    - name: Echo Hello-world
+      run: echo "HEllo-world"
+  
